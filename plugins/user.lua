@@ -35,41 +35,32 @@ return {
       require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
     end,
   },
-  "tribela/vim-transparent",
   {
-    "xiyaowong/transparent.nvim",
+    "rcarriga/nvim-notify",
+    config = function() require("notify").setup { background_colour = "#000000" } end,
+  },
+  {
+    "MunifTanjim/prettier.nvim",
     config = function()
-      require("transparent").setup {
-        groups = { -- table: default groups
-          "Normal",
-          "NormalNC",
-          "Comment",
-          "Constant",
-          "Special",
-          "Identifier",
-          "Statement",
-          "PreProc",
-          "Type",
-          "Underlined",
-          "Todo",
-          "String",
-          "Function",
-          "Conditional",
-          "Repeat",
-          "Operator",
-          "Structure",
-          "LineNr",
-          "NonText",
-          "SignColumn",
-          "CursorLineNr",
-          "EndOfBuffer",
+      require("preitter").setup {
+        bin = "prettier", -- or `'prettierd'` (v0.23.3+)
+        filetypes = {
+          "css",
+          "graphql",
+          "html",
+          "javascript",
+          "javascriptreact",
+          "json",
+          "less",
+          "markdown",
+          "scss",
+          "typescript",
+          "typescriptreact",
+          "yaml",
+          "vue",
         },
-        extra_groups = {},   -- table: additional groups that should be cleared
-        exclude_groups = {}, -- table: groups you don't want to clear
       }
     end,
   },
+  { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 }
-
--- TODO test
--- todo

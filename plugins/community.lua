@@ -5,10 +5,16 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- colorshemes
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.everforest" },
   { import = "astrocommunity.colorscheme.sonokai" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+
+  -- languages
+  { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript" },
-  -- { import = "astrocommunity.colorscheme.tokyonight" },
+  { import = "astrocommunity.pack.json" },
 }
