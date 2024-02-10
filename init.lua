@@ -17,8 +17,8 @@ return {
     },
   },
   -- Set colorscheme to use
-  -- tokyonight, astrodark, catppuccin, sonokai, everforest
-  colorscheme = "catppuccin",
+  -- solarized-osaka, tokyonight, astrodark, catppuccin, sonokai, everforest
+  colorscheme = "everforest",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -32,6 +32,19 @@ return {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
+          "css",
+          "graphql",
+          "html",
+          "javascript",
+          "javascriptreact",
+          "json",
+          "less",
+          "markdown",
+          "scss",
+          "typescript",
+          "typescriptreact",
+          "yaml",
+          "vue",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -90,5 +103,7 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.opt.foldmethod = "expr" -- indent
+    vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
   end,
 }

@@ -23,7 +23,7 @@ return {
   -- NvimTreeNormalNC = { bg = "none", fg = "none", sp = "none", ctermbg = "none", italic = true,  },
   -- NvimTreeNormalFloat = { bg = "none", fg = "none", sp = "none", ctermbg = "none", italic = true,  },
   -- NvimTreeEndOfBuffer = { bg = "none", fg = "none", sp = "none", ctermbg = "none", italic = true,  },
-  --
+
   NeoTreeNormal = { bg = "none", fg = "none", sp = "none", ctermbg = "none" },
   NeoTreeNormalNC = { bg = "none", fg = "none", sp = "none", ctermbg = "none" },
   NeoTreeNormalFloat = { bg = "none", fg = "none", sp = "none", ctermbg = "none" },

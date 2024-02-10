@@ -37,30 +37,23 @@ return {
   },
   {
     "rcarriga/nvim-notify",
-    config = function() require("notify").setup { background_colour = "#000000" } end,
-  },
-  {
-    "MunifTanjim/prettier.nvim",
     config = function()
-      require("preitter").setup {
-        bin = "prettier", -- or `'prettierd'` (v0.23.3+)
-        filetypes = {
-          "css",
-          "graphql",
-          "html",
-          "javascript",
-          "javascriptreact",
-          "json",
-          "less",
-          "markdown",
-          "scss",
-          "typescript",
-          "typescriptreact",
-          "yaml",
-          "vue",
-        },
+      require("notify").setup {
+        background_colour = "#000000",
       }
     end,
   },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+  "simrat39/rust-tools.nvim",
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function() vim.g.rustfmt_autosave = 1 end,
+  },
 }
